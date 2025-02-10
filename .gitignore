@@ -1,0 +1,27 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/.vs
+/.vs/
+/bin/
+/obj/
+/packages/
+/riderModule.iml
+/riderModule.RiderPlugin.csproj.user
+/riderModule.RiderPlugin.csproj.nuget.dgspec.json
+/riderModule.RiderPlugin.csproj.nuget.g.props
+/riderModule.RiderPlugin.csproj.nuget.g.targets
+/riderModule.RiderPlugin.csproj.nuget.cache.targets
+/riderModule.RiderPlugin.csproj.nuget.cache.props
+/riderModule.RiderPlugin.csproj.nuget.g.props
+/riderModule.RiderPlugin.csproj.nuget.g.targets
+/riderModule.RiderPlugin.csproj.nuget.g.props
+/riderModule.RiderPlugin.csproj.nuget.g.targets
+/riderModule.RiderPlugin.
+/.idea
+
+# windsurf rules
+.windsurfrules
+.windsurfrules

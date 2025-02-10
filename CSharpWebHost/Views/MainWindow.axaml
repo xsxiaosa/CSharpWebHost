@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:CSharpWebHost.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+        x:Class="CSharpWebHost.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="天气预报系统">
+
+    <Grid ColumnDefinitions="300,*" Margin="10">
+        <!-- 左侧操作面板 -->
+        <StackPanel Grid.Column="0" Spacing="10" Margin="10">
+            <TextBlock Text="天气操作面板" FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+            
+            <!-- 获取天气列表 -->
+            <Button Content="获取所有城市天气" Command="{Binding GetAllWeather}"
+                    HorizontalAlignment="Stretch" Height="40"/>
+            
+            <!-- 获取单个城市天气 -->
+            <TextBox Watermark="输入城市ID" Text="{Binding CityId}"/>
+            <Button Content="获取指定城市天气" Command="{Binding GetWeatherById}"
+                    HorizontalAlignment="Stretch" Height="40"/>
+            
+            <!-- 新增城市天气 -->
+            <TextBox Watermark="城市名称" Text="{Binding  NewCity}"/>
+            <TextBox Watermark="温度" Text="{Binding NewTemperature}"/>
+            <TextBox Watermark="天气状况" Text="{Binding NewCondition}"/>
+            <Button Content="新增城市天气" Command="{Binding AddWeather}"
+                    HorizontalAlignment="Stretch" Height="40"/>
+            
+            <!-- 修改城市天气 -->
+            <TextBox Watermark="要修改的城市ID" Text="{Binding UpdateCityId}"/>
+            <TextBox Watermark="新温度" Text="{Binding UpdateTemperature}"/>
+            <TextBox Watermark="新天气状况" Text="{Binding UpdateCondition}"/>
+            <Button Content="修改城市天气" Command="{Binding UpdateWeather}"
+                    HorizontalAlignment="Stretch" Height="40"/>
+            
+            <!-- 删除城市天气 -->
+            <TextBox Watermark="要删除的城市ID" Text="{Binding DeleteCityId}"/>
+            <Button Content="删除城市天气" Command="{Binding DeleteWeather}"
+                    HorizontalAlignment="Stretch" Height="40"/>
+        </StackPanel>
+
+        <!-- 右侧响应内容 -->
+        <Border Grid.Column="1" Margin="10" BorderBrush="Gray" BorderThickness="1">
+            <Grid RowDefinitions="Auto,*">
+                <TextBlock Text="API 响应内容" FontSize="20" Margin="10"/>
+                <ScrollViewer Grid.Row="1" Margin="10">
+                    <TextBox Text="{Binding ApiResponse}"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             IsReadOnly="True"
+                             Height="500"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

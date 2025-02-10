@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CSharpWebHost": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:53434;http://localhost:53435"
+    }
+  }
+}
