@@ -1,0 +1,97 @@
+---
+description: 
+globs: 
+---
+
+rules:
+  # 架构规范
+  - name: "分层架构规范"
+    description: "确保项目遵循清晰的分层架构"
+    pattern: ".*\\.(cs|vb)$"
+    rules:
+      - "Domain 层不应该依赖于其他层"
+      - "Infrastructure 层应该实现 Domain 层定义的接口"
+      - "Application 层不应该直接访问 Infrastructure 层"
+      - "表现层只能依赖 Application 层"
+
+  # 命名规范
+  - name: "命名约定"
+    pattern: ".*\\.cs$"
+    rules:
+      - "接口必须以 I 开头"
+      - "抽象类必须以 Abstract 或 Base 开头"
+      - "私有字段必须以下划线开头"
+      - "常量应该全部大写并使用下划线分隔"
+      - "类名应该使用 PascalCase"
+      - "方法名应该使用 PascalCase"
+      - "局部变量应该使用 camelCase"
+
+  # 代码质量规范
+  - name: "代码质量"
+    pattern: ".*\\.cs$"
+    rules:
+      - "避免方法超过 30 行代码"
+      - "避免类超过 300 行代码"
+      - "避免嵌套超过 3 层"
+      - "禁止使用 magic numbers"
+      - "必须处理所有异常"
+      - "禁止空 catch 块"
+      - "使用依赖注入而不是直接实例化"
+
+  # 注释规范
+  - name: "文档规范"
+    pattern: ".*\\.cs$"
+    rules:
+      - "公共 API 必须有 XML 文档注释"
+      - "复杂业务逻辑必须有详细注释"
+      - "TODO 注释必须包含 JIRA 票号"
+      - "废弃的代码应该使用 [Obsolete] 特性"
+
+  # 测试规范
+  - name: "单元测试规范"
+    pattern: ".*Tests\\.cs$"
+    rules:
+      - "测试方法名应遵循 Should_ExpectedBehavior_When_StateUnderTest 格式"
+      - "每个测试只测试一个场景"
+      - "使用 AAA (Arrange-Act-Assert) 模式"
+      - "避免测试方法之间的依赖"
+      - "使用有意义的测试数据"
+
+  # 性能规范
+  - name: "性能优化"
+    pattern: ".*\\.cs$"
+    rules:
+      - "优先使用 StringBuilder 处理大量字符串拼接"
+      - "使用异步方法处理 I/O 操作"
+      - "避免在循环中进行数据库操作"
+      - "合理使用缓存机制"
+      - "避免不必要的对象创建"
+
+  # 安全规范
+  - name: "安全规范"
+    pattern: ".*\\.cs$"
+    rules:
+      - "敏感数据必须加密存储"
+      - "避免 SQL 注入风险"
+      - "避免跨站脚本攻击"
+      - "使用安全的密码哈希算法"
+      - "正确处理用户输入验证"
+
+  # 版本控制规范
+  - name: "版本控制"
+    pattern: ".*"
+    rules:
+      - "提交信息必须符合约定式提交规范"
+      - "避免提交编译产物"
+      - "避免提交敏感配置信息"
+      - "保持每次提交的原子性"
+
+  # API 设计规范
+  - name: "API 设计"
+    pattern: ".*Controller\\.cs$"
+    rules:
+      - "遵循 RESTful 设计原则"
+      - "使用正确的 HTTP 方法"
+      - "返回合适的 HTTP 状态码"
+      - "版本化 API 端点"
+      - "实现适当的速率限制"
