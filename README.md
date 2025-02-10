@@ -1,18 +1,29 @@
-# CSharp Web Host
-
-一个基于 .NET 的轻量级 Web 主机框架。
+# CSharpWebHost 天气预报系统
 
 ## 项目简介
+这是一个基于 Avalonia UI 和 ASP.NET Core 开发的桌面应用程序，集成了天气信息管理的 Web API 服务。该应用程序提供了一个图形化界面来管理天气数据，同时也提供了 RESTful API 接口供外部调用。
 
-CSharpWebHost 是一个简单但功能完整的 Web 主机框架，允许开发者快速搭建和部署 Web 应用程序。
+## 技术栈
+- .NET 8.0
+- Avalonia UI 11.0.10 (桌面UI框架)
+- ASP.NET Core Web API
+- ReactiveUI (MVVM框架)
+- Swagger/OpenAPI
 
-## 主要特性
+## 主要功能
+1. **天气数据管理**
+   - 查看所有城市天气信息
+   - 获取指定城市天气信息
+   - 添加新城市天气数据
+   - 更新现有城市天气信息
+   - 删除城市天气数据
 
-- 轻量级设计
-- 易于配置和使用
-- 支持中间件扩展
-- 内置依赖注入支持
-- 灵活的路由系统
+2. **API 接口**
+   - RESTful API 支持
+   - Swagger UI 接口文档
+   - JSON 格式数据交换
+
+## 项目结构
 
 ## Web API 接口文档
 
