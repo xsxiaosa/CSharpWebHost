@@ -1,9 +1,8 @@
-using System;
+using CSharpWebService.Data;
+using CSharpWebService.Models;
 using Microsoft.AspNetCore.Mvc;
-using CSharpWebHost.Models;
-using CSharpWebHost.Data;
 
-namespace CSharpWebHost.Controllers
+namespace CSharpWebService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

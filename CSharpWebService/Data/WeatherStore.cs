@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using CSharpWebHost.Models;
+using CSharpWebService.Models;
 
-namespace CSharpWebHost.Data
+namespace CSharpWebService.Data
 {
     public static class WeatherStore
     {

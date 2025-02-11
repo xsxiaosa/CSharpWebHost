@@ -5,9 +5,11 @@ using System.Reactive;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Threading.Tasks;
+using CSharpWebService;
 using ReactiveUI;
-using CSharpWebHost.Models;
 using CSharpWebHost.Services;
+using CSharpWebService.Models;
+using WebApiService = CSharpWebService.WebApiService;
 
 namespace CSharpWebHost.ViewModels
 {

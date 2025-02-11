@@ -1,6 +1,4 @@
-using System;
-
-namespace CSharpWebHost.Models
+namespace CSharpWebService.Models
 {
     public class Weather
     {
